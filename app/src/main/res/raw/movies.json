@@ -1,31 +1,42 @@
 [{
-  "id": "0", "title": "Gremlins",
+  "id": "0",
+  "title": "Gremlins",
   "description": "A boy inadvertantly breaks 3 important rules concerning his new pet and unleashes a horde of malevolently mischievous monsters on a small town.",
-  "studio": "Warner Bros.", "videoUrl": "http://videos.movielist.com/classics/FLV/gremlins.mp4",
-  "category": "Comedy", "cardImageUrl": "http://www.movielist.com/img/posters/big/zoom/gremlins.jpg",
+  "studio": "Warner Bros.",
+  "videoUrl": "http://videos.movielist.com/classics/FLV/gremlins.mp4",
+  "category": "Comedy",
+  "cardImageUrl": "http://www.movielist.com/img/posters/big/zoom/gremlins.jpg",
   "bgImageUrl": "http://www.movie-list.com/img/posters/big/zoom/gremlins.jpg"
 }, {
-  "id": "1", "title": "Evil Dead (2013)",
+  "id": "1",
+  "title": "Evil Dead (2013)",
   "description": "Mia, a young woman struggling with sobriety, heads to a remote cabin with her brother and a group of friends, where the discovery of a Book of the Dead leads to danger and horror.",
   "studio": "TriStar Pictures",
   "videoUrl": "http://cdn.movie-list.com/flvideo/2442.mp4",
-  "category": "Horror", "cardImageUrl": "http://www.movielist.com/img/posters/big/evildead2013.jpg",
+  "category": "Horror",
+  "cardImageUrl": "http://www.movielist.com/img/posters/big/evildead2013.jpg",
   "bgImageUrl": "http://www.movie-list.com/img/posters/big/evildead2013.jpg"
 }, {
-  "id": "2", "title": "Escape from New York",
+  "id": "2",
+  "title": "Escape from New York",
   "description": "In 1997, when the US President crashes into Manhattan, now a giant max. security prison, a convicted bank robber is sent in for a rescue.",
-  "studio": "TriStar Pictures", "videoUrl": "http://videos.movielist.com/classics/HD/escapefromnewyork.mp4",
-  "category": "Action", "cardImageUrl": "http://www.movielist.com/img/posters/big/escapefromnewyork.jpg",
+  "studio": "TriStar Pictures",
+  "videoUrl": "http://videos.movielist.com/classics/HD/escapefromnewyork.mp4",
+  "category": "Action",
+  "cardImageUrl": "http://www.movielist.com/img/posters/big/escapefromnewyork.jpg",
   "bgImageUrl": "http://www.movie-list.com/img/posters/big/escapefromnewyork.jpg"
 }, {
-  "id": "3", "title": "Man of Steel",
+  "id": "3",
+  "title": "Man of Steel",
   "description": "A young itinerant worker is forced to confront his secret extrastellar origin when Earth is invaded by members of his own race.",
-  "studio": "Warner Bros.", "videoUrl":
-  "http://www.mp4point.com/downloads/9de7027baa3f.mp4",
-  "category": "Action", "cardImageUrl": "http://ia.mediaimdb.com/images/M/MV5BMjI5OTYzNjI0Ml5BMl5BanBnXkFtZTcwMzM1NDA1OQ@@._V1_SY317_CR1,0,21 4,317_AL_.jpg",
+  "studio": "Warner Bros.",
+  "videoUrl": "http://www.mp4point.com/downloads/9de7027baa3f.mp4",
+  "category": "Action",
+  "cardImageUrl": "http://ia.mediaimdb.com/images/M/MV5BMjI5OTYzNjI0Ml5BMl5BanBnXkFtZTcwMzM1NDA1OQ@@._V1_SY317_CR1,0,21 4,317_AL_.jpg",
   "bgImageUrl": "http://ia.mediaimdb.com/images/M/MV5BMjI5OTYzNjI0Ml5BMl5BanBnXkFtZTcwMzM1NDA1OQ@@._V1_SY317_CR1,0,21 4,317_AL_.jpg"
 }, {
-  "id": "4", "title": "Carrie (1976)",
+  "id": "4",
+  "title": "Carrie (1976)",
   "description": "Carrie White is a shy young girl who doesn't make friends easily. After her class mates taunt her about her horrified reaction to her totally unexpected first period one of them takes pity on her and gets Tommy Ross, her boyfriend and class hunk to invite Carrie to the senior prom. Meanwhile another girl who has been banned from the prom for her continued aggressive behaviour is not as forgiving and plans a trick to embarrass Carrie in front of the whole school. What she doesn't realise is that Carrie is ... gifted, and you really don't want to get her angry.",
   "studio": "MGM",
   "videoUrl": "http://videos.movie-list.com/classics/HD/carrie.mp4",
@@ -33,31 +44,46 @@
   "cardImageUrl": "http://www.movie-list.com/img/posters/big/carrie.jpg",
   "bgImageUrl": "http://www.movie-list.com/img/posters/big/carrie.jpg"
 }, {
-  "id": "5", "title": "Army of Darkness",
+  "id": "5",
+  "title": "Army of Darkness",
   "description": "A modern-day man travels back to medieval time to fight an army of the dead. Groovy.",
   "studio": "Universal", "videoUrl": "http://videos.movielist.com/classics/FLV/armyofdarkness.mp4",
-  "category": "Comedy", "cardImageUrl": "http://www.movielist.com/img/posters/big/armyofdarkness.jpg",
+  "category": "Comedy",
+  "cardImageUrl": "http://www.movielist.com/img/posters/big/armyofdarkness.jpg",
   "bgImageUrl": "http://www.movie-list.com/img/posters/big/armyofdarkness.jpg"
 }, {
-  "id": "6", "title": "Planet of the Apes (1968)",
+  "id": "6",
+  "title": "Planet of the Apes (1968)",
   "description": "An astronaut crew crash lands on a planet in the distant future where intelligent talking apes are the dominant species, and humans are the oppressed and enslaved.",
   "studio": "20th Century Fox", "videoUrl": "http://videos.movielist.com/classics/FLV/planetoftheapes68b.mp4",
-  "category": "Action", "cardImageUrl": "http://www.movielist.com/img/posters/big/planetoftheapes68.jpg",
+  "category": "Action",
+  "cardImageUrl": "http://www.movielist.com/img/posters/big/planetoftheapes68.jpg",
   "bgImageUrl": "http://www.movie-list.com/img/posters/big/planetoftheapes68.jpg"
 }, {
-  "id": "7", "title": "Rocky Horror Picture Show",
+  "id": "7",
+  "title": "Rocky Horror Picture Show",
   "description": "A newly engaged couple have a breakdown in an isolated area andmust pay a call to the bizarre residence of Dr. Frank-N-Furter.",
   "studio": "20th Century Fox",
   "videoUrl": "http://ct1.elfilm.com/video/o/7789-1325341984.mp4",
-  "category": "Comedy", "cardImageUrl": "http://ia.mediaimdb.com/images/M/MV5BMjE5NDc0NjE2NF5BMl5BanBnXkFtZTcwMTE4MTI3NA@@._V1_SX214_AL_.jpg"
-,
+  "category": "Comedy",
+  "cardImageUrl": "http://ia.mediaimdb.com/images/M/MV5BMjE5NDc0NjE2NF5BMl5BanBnXkFtZTcwMTE4MTI3NA@@._V1_SX214_AL_.jpg",
   "bgImageUrl": "http://ia.mediaimdb.com/images/M/MV5BMjE5NDc0NjE2NF5BMl5BanBnXkFtZTcwMTE4MTI3NA@@._V1_SX214_AL_.jpg"
 }, {
-  "id": "8", "title": "Cabin in the Woods",
+  "id": "8",
+  "title": "Cabin in the Woods",
   "description": "Five friends go for a break at a remote cabin in the woods, wherethey get more than they bargained for. Together, they must discover the truth behindthe cabin in the woods.",
   "studio": "Lions Gate",
   "videoUrl": "http://ct2.elfilm.com/video/o/101132-1366710634.mp4",
-  "category": "Horror", "cardImageUrl": "http://ia.mediaimdb.com/images/M/MV5BNTUxNzYyMjg2N15BMl5BanBnXkFtZTcwMTExNzExNw@@._V1_SX214_AL_.jpg"
-,
+  "category": "Horror",
+  "cardImageUrl": "http://ia.mediaimdb.com/images/M/MV5BNTUxNzYyMjg2N15BMl5BanBnXkFtZTcwMTExNzExNw@@._V1_SX214_AL_.jpg",
+  "bgImageUrl": "http://ia.mediaimdb.com/images/M/MV5BNTUxNzYyMjg2N15BMl5BanBnXkFtZTcwMTExNzExNw@@._V1_SX214_AL_.jpg"
+},{
+  "id": "9",
+  "title": "Video protegido 1",
+  "description": "Descripción del video protegido 1",
+  "studio": "Lions Gate",
+  "videoUrl": "http://ct2.elfilm.com/video/o/101132-1366710634.mp4",
+  "category": "Protected",
+  "cardImageUrl": "http://ia.mediaimdb.com/images/M/MV5BNTUxNzYyMjg2N15BMl5BanBnXkFtZTcwMTExNzExNw@@._V1_SX214_AL_.jpg",
   "bgImageUrl": "http://ia.mediaimdb.com/images/M/MV5BNTUxNzYyMjg2N15BMl5BanBnXkFtZTcwMTExNzExNw@@._V1_SX214_AL_.jpg"
 } ]
