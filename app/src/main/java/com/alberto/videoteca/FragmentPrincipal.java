@@ -1,17 +1,24 @@
 package com.alberto.videoteca;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.icu.text.DisplayContext;
 import android.os.Bundle;
 import android.support.v17.leanback.app.BrowseFragment;
 import android.support.v17.leanback.widget.ArrayObjectAdapter;
 import android.support.v17.leanback.widget.HeaderItem;
+import android.support.v17.leanback.widget.ImageCardView;
 import android.support.v17.leanback.widget.ListRow;
 import android.support.v17.leanback.widget.ListRowPresenter;
+import android.support.v17.leanback.widget.OnItemViewClickedListener;
 import android.support.v17.leanback.widget.Presenter;
+import android.support.v17.leanback.widget.Row;
+import android.support.v17.leanback.widget.RowPresenter;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -35,6 +42,7 @@ public class FragmentPrincipal extends BrowseFragment {
         leerDatos();
         iniciarInterfazUsuario();
         cargarListas();
+        setupEventListeners();
     }
 
     private void leerDatos() {
@@ -85,14 +93,31 @@ public class FragmentPrincipal extends BrowseFragment {
     }
 
     private void listaPreferencias( ArrayObjectAdapter adapter ) {
-        HeaderItem gridHeader = new HeaderItem(adapter.size() - 1,
-                "PREFERENCIAS");
+        HeaderItem gridHeader = new HeaderItem(adapter.size() - 1, "PREFERENCIAS");
         GridItemPresenter mGridPresenter = new GridItemPresenter();
         ArrayObjectAdapter gridRowAdapter = new ArrayObjectAdapter(mGridPresenter);
         gridRowAdapter.add("Vistas");
         gridRowAdapter.add("Errores");
         gridRowAdapter.add("Preferencias");
         adapter.add(new ListRow(gridHeader, gridRowAdapter));
+    }
+
+    private void setupEventListeners() {
+        setOnItemViewClickedListener(new ItemViewClickedListener());
+    }
+    private final class ItemViewClickedListener implements OnItemViewClickedListener {
+        @Override
+        public void onItemClicked(Presenter.ViewHolder itemViewHolder, Object item, RowPresenter.ViewHolder rowViewHolder, Row row) {
+            if (item instanceof Movie) {
+                Movie movie = (Movie) item;
+                Intent intent = new Intent(getActivity(), ActividadDetalles.class);
+                intent.putExtra(ActividadDetalles.MOVIE, movie);
+                Bundle bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), ((ImageCardView) itemViewHolder.view).getMainImageView(), ActividadDetalles.SHARED_ELEMENT_NAME).toBundle();
+                getActivity().startActivity(intent, bundle);
+            } else if (item instanceof String) {
+                Toast.makeText(getActivity(), ((String) item), Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     private class GridItemPresenter extends Presenter {
@@ -102,8 +127,7 @@ public class FragmentPrincipal extends BrowseFragment {
             view.setLayoutParams(new ViewGroup.LayoutParams(GRID_ITEM_WIDTH, GRID_ITEM_HEIGHT));
             view.setFocusable(true);
             view.setFocusableInTouchMode(true);
-            view.setBackgroundColor(getResources().getColor(
-                    R.color.default_background));
+            view.setBackgroundColor(getResources().getColor(R.color.default_background));
             view.setTextColor(Color.WHITE);
             view.setGravity(Gravity.CENTER);
             return new ViewHolder(view);
