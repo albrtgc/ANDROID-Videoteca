@@ -4,6 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
     <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
         android:allowBackup="true"
@@ -23,6 +24,17 @@
         </activity>
         <activity android:name=".ActividadDetalles" />
         <activity android:name=".PlaybackOverlayActivity" />
+        <receiver
+            android:name=".BootupActivity"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".UpdateRecommendationsService"
+            android:enabled="true" />
     </application>
 
 </manifest>
