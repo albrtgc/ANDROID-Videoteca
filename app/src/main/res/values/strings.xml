@@ -37,4 +37,8 @@
     <string name="error_fragment_message">An error occurred</string>
     <string name="dismiss_error">Dismiss</string>
     <string name="oops">Oops</string>
+
+    <string name="search_label">Videoteca</string>
+    <string name="search_hint">Búsqueda de videos</string>
+    <string name="settings_description">Videoteca</string>
 </resources>

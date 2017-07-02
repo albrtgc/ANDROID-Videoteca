@@ -43,7 +43,21 @@ public class FragmentDetalles extends DetailsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initBackground();
-        mSelectedMovie = (Movie) getActivity().getIntent().getSerializableExtra(MOVIE);
+
+        Bundle extras = getActivity().getIntent().getExtras();
+        if (extras != null) {
+            mSelectedMovie = (Movie) getActivity().getIntent().getSerializableExtra(MOVIE);
+        } else {
+            int selectedIndex = Integer.parseInt(getActivity().getIntent().getData().getLastPathSegment());
+            int indice = 0;
+            for (Movie movie : MovieList.list) {
+                indice++;
+                if (indice == selectedIndex) {
+                    mSelectedMovie = movie;
+                }
+            }
+        }
+
         updateBackground(mSelectedMovie.getBackgroundImageURI().toString());
 
         mDorPresenter =new DetailsOverviewRowPresenter(new DetailsDescriptionPresenter());
@@ -51,7 +65,6 @@ public class FragmentDetalles extends DetailsFragment {
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(mMetrics);
         cargarDetalles(mSelectedMovie);
         mDorPresenter.setSharedElementEnterTransition(getActivity(), ActividadDetalles.SHARED_ELEMENT_NAME);
-
         mDorPresenter.setOnActionClickedListener(new OnActionClickedListener() {
             @Override
             public void onActionClicked(Action action) {
