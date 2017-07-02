@@ -1,5 +1,6 @@
 package com.alberto.videoteca;
 
+import android.graphics.Color;
 import android.icu.text.DisplayContext;
 import android.os.Bundle;
 import android.support.v17.leanback.app.BrowseFragment;
@@ -7,6 +8,10 @@ import android.support.v17.leanback.widget.ArrayObjectAdapter;
 import android.support.v17.leanback.widget.HeaderItem;
 import android.support.v17.leanback.widget.ListRow;
 import android.support.v17.leanback.widget.ListRowPresenter;
+import android.support.v17.leanback.widget.Presenter;
+import android.view.Gravity;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -21,6 +26,9 @@ import java.util.List;
 
 public class FragmentPrincipal extends BrowseFragment {
 
+    private static final int GRID_ITEM_WIDTH = 200;
+    private static final int GRID_ITEM_HEIGHT = 200;
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -31,8 +39,7 @@ public class FragmentPrincipal extends BrowseFragment {
 
     private void leerDatos() {
         MovieList.list = new ArrayList<Movie>();
-        String json = Utils.loadJSONFromResource( getActivity(),
-                R.raw.movies );
+        String json = Utils.loadJSONFromResource( getActivity(), R.raw.movies );
         Gson gson = new Gson();
         Type collection = new TypeToken<ArrayList<Movie>>(){}.getType();
         MovieList.list = gson.fromJson( json, collection );
@@ -62,6 +69,7 @@ public class FragmentPrincipal extends BrowseFragment {
                 rowsAdapter.add( new ListRow( header, listRowAdapter ) );
             }
         }
+        listaPreferencias(rowsAdapter);
         setAdapter( rowsAdapter );
     }
     private List<String> getCategories() {
@@ -75,4 +83,39 @@ public class FragmentPrincipal extends BrowseFragment {
         }
         return categories;
     }
+
+    private void listaPreferencias( ArrayObjectAdapter adapter ) {
+        HeaderItem gridHeader = new HeaderItem(adapter.size() - 1,
+                "PREFERENCIAS");
+        GridItemPresenter mGridPresenter = new GridItemPresenter();
+        ArrayObjectAdapter gridRowAdapter = new ArrayObjectAdapter(mGridPresenter);
+        gridRowAdapter.add("Vistas");
+        gridRowAdapter.add("Errores");
+        gridRowAdapter.add("Preferencias");
+        adapter.add(new ListRow(gridHeader, gridRowAdapter));
+    }
+
+    private class GridItemPresenter extends Presenter {
+        @Override
+        public ViewHolder onCreateViewHolder(ViewGroup parent) {
+            TextView view = new TextView(parent.getContext());
+            view.setLayoutParams(new ViewGroup.LayoutParams(GRID_ITEM_WIDTH, GRID_ITEM_HEIGHT));
+            view.setFocusable(true);
+            view.setFocusableInTouchMode(true);
+            view.setBackgroundColor(getResources().getColor(
+                    R.color.default_background));
+            view.setTextColor(Color.WHITE);
+            view.setGravity(Gravity.CENTER);
+            return new ViewHolder(view);
+        }
+        @Override
+        public void onBindViewHolder(ViewHolder viewHolder, Object item) {
+            ((TextView) viewHolder.view).setText((String) item);
+        }
+        @Override
+        public void onUnbindViewHolder(ViewHolder viewHolder) {
+        }
+    }
+
+
 }
