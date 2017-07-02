@@ -1,5 +1,6 @@
 package com.alberto.videoteca;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v17.leanback.app.BackgroundManager;
 import android.support.v17.leanback.app.DetailsFragment;
@@ -10,6 +11,7 @@ import android.support.v17.leanback.widget.DetailsOverviewRow;
 import android.support.v17.leanback.widget.DetailsOverviewRowPresenter;
 import android.support.v17.leanback.widget.ListRow;
 import android.support.v17.leanback.widget.ListRowPresenter;
+import android.support.v17.leanback.widget.OnActionClickedListener;
 import android.util.DisplayMetrics;
 
 import com.bumptech.glide.Glide;
@@ -49,6 +51,20 @@ public class FragmentDetalles extends DetailsFragment {
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(mMetrics);
         cargarDetalles(mSelectedMovie);
         mDorPresenter.setSharedElementEnterTransition(getActivity(), ActividadDetalles.SHARED_ELEMENT_NAME);
+
+        mDorPresenter.setOnActionClickedListener(new OnActionClickedListener() {
+            @Override
+            public void onActionClicked(Action action) {
+                if (action.getId() == ACTION_WATCH_TRAILER) {
+                    Intent intent = new Intent(getActivity(), PlaybackOverlayActivity.class);
+                    intent.putExtra(getResources().getString(R.string.movie),
+                            mSelectedMovie);
+                    intent.putExtra(getResources().getString(R.string.should_start),
+                            true);
+                    startActivity(intent);
+                }
+            }
+        });
     }
     private void initBackground() {
         mBackgroundManager = BackgroundManager.getInstance(getActivity());
