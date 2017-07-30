@@ -1,4 +1,4 @@
-package com.alberto.videoteca;
+package com.alberto.videoteca.activity;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -11,6 +11,9 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.VideoView;
 
+import com.alberto.videoteca.fragment.PlaybackOverlayFragment;
+import com.alberto.videoteca.R;
+import com.alberto.videoteca.models.Movie;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
@@ -98,8 +101,7 @@ public class PlaybackOverlayActivity extends Activity implements
     }
 
     private void updatePlaybackState(int position) {
-        PlaybackState.Builder stateBuilder = new PlaybackState.Builder()
-                .setActions(getAvailableActions());
+        PlaybackState.Builder stateBuilder = new PlaybackState.Builder().setActions(getAvailableActions());
         int state = PlaybackState.STATE_PLAYING;
         if (mPlaybackState == LeanbackPlaybackState.PAUSED) {
             state = PlaybackState.STATE_PAUSED;

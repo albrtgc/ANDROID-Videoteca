@@ -1,4 +1,4 @@
-package com.alberto.videoteca;
+package com.alberto.videoteca.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,13 +16,19 @@ import android.support.v17.leanback.widget.RowPresenter;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.text.TextUtils;
 
+import com.alberto.videoteca.presenter.CardPresenter;
+import com.alberto.videoteca.models.Movie;
+import com.alberto.videoteca.models.MovieList;
+import com.alberto.videoteca.activity.DetailsActivity;
+
 import java.util.Locale;
 
 /**
  * Created by Alberto on 02/07/2017.
  */
 
-public class BusquedaFragment extends android.support.v17.leanback.app.SearchFragment implements android.support.v17.leanback.app.SearchFragment.SearchResultProvider {
+public class FragmentSearch extends android.support.v17.leanback.app.SearchFragment implements android.support.v17.leanback.app.SearchFragment.SearchResultProvider {
+
     private static final int NUM_ROWS = 3;
     private static final int SEARCH_DELAY_MS = 1000;
     private ArrayObjectAdapter mRowsAdapter;
@@ -93,9 +99,9 @@ public class BusquedaFragment extends android.support.v17.leanback.app.SearchFra
     private final class ItemViewClickedListener implements OnItemViewClickedListener {
         @Override
         public void onItemClicked(Presenter.ViewHolder itemViewHolder, Object item, RowPresenter.ViewHolder rowViewHolder, Row row) {
-            Intent intent = new Intent(getActivity(), ActividadDetalles.class);
-            intent.putExtra(ActividadDetalles.MOVIE, (Movie) item);
-            Bundle bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), ((ImageCardView)itemViewHolder.view).getMainImageView(), ActividadDetalles.SHARED_ELEMENT_NAME).toBundle();
+            Intent intent = new Intent(getActivity(), DetailsActivity.class);
+            intent.putExtra(DetailsActivity.MOVIE, (Movie) item);
+            Bundle bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), ((ImageCardView)itemViewHolder.view).getMainImageView(), DetailsActivity.SHARED_ELEMENT_NAME).toBundle();
             getActivity().startActivity(intent, bundle);
         }
     }

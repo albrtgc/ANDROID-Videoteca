@@ -1,4 +1,4 @@
-package com.alberto.videoteca;
+package com.alberto.videoteca.models;
 
 import android.util.Log;
 
@@ -11,6 +11,7 @@ import java.net.URISyntaxException;
  */
 
 public class Movie implements Serializable {
+
     static final long serialVersionUID = 727566175075960653L;
     private static long count = 0;
     private long id;

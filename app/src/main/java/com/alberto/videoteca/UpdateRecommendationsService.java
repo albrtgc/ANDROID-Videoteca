@@ -8,6 +8,10 @@ import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 
+import com.alberto.videoteca.activity.DetailsActivity;
+import com.alberto.videoteca.models.Movie;
+import com.alberto.videoteca.models.MovieList;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -57,10 +61,10 @@ public class UpdateRecommendationsService extends IntentService {
         }
     }
     private PendingIntent buildPendingIntent(Movie movie) {
-        Intent detailsIntent = new Intent(this, ActividadDetalles.class);
+        Intent detailsIntent = new Intent(this, DetailsActivity.class);
         detailsIntent.putExtra("Movie", movie);
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addParentStack(ActividadDetalles.class);
+        stackBuilder.addParentStack(DetailsActivity.class);
         stackBuilder.addNextIntent(detailsIntent);
         detailsIntent.setAction(Long.toString(movie.getId()));
         PendingIntent intent = stackBuilder.getPendingIntent(0,

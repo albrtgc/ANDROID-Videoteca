@@ -1,4 +1,4 @@
-package com.alberto.videoteca;
+package com.alberto.videoteca.fragment;
 
 import android.content.Context;
 import android.media.MediaMetadataRetriever;
@@ -24,6 +24,11 @@ import android.support.v17.leanback.widget.RowPresenter;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.alberto.videoteca.R;
+import com.alberto.videoteca.activity.DetailsActivity;
+import com.alberto.videoteca.models.Movie;
+import com.alberto.videoteca.models.MovieList;
+import com.alberto.videoteca.presenter.CardPresenter;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
@@ -38,6 +43,7 @@ import java.util.List;
  */
 
 public class PlaybackOverlayFragment extends android.support.v17.leanback.app.PlaybackOverlayFragment {
+
     private static final String TAG = "PlaybackControlsFragmnt";
 
     private static final boolean SHOW_DETAIL = true;
@@ -78,7 +84,7 @@ public class PlaybackOverlayFragment extends android.support.v17.leanback.app.Pl
 
         mItems = new ArrayList<Movie>();
         mSelectedMovie = (Movie) getActivity()
-                .getIntent().getSerializableExtra(ActividadDetalles.MOVIE);
+                .getIntent().getSerializableExtra(DetailsActivity.MOVIE);
 
         List<Movie> movies = MovieList.list;
 

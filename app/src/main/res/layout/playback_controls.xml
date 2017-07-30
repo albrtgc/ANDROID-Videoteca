@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:layout_centerInParent="true"></VideoView>
     <fragment android:id="@+id/playback_controls_fragment"
-        android:name="com.alberto.videoteca.PlaybackOverlayFragment"
+        android:name="com.alberto.videoteca.fragment.PlaybackOverlayFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

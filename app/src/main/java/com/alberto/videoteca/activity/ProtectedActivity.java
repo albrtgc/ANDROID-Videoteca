@@ -1,4 +1,4 @@
-package com.alberto.videoteca;
+package com.alberto.videoteca.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,11 +8,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.alberto.videoteca.R;
+
 /**
  * Created by Alberto on 02/07/2017.
  */
 
-public class ActividadProtected extends Activity {
+public class ProtectedActivity extends Activity {
 
     public static final String MOVIE = "Movie";
     public static final String SHARED_ELEMENT_NAME = "hero";
@@ -36,7 +38,7 @@ public class ActividadProtected extends Activity {
                     if( passSaved.equalsIgnoreCase(passIntroduce)){
                         returnActivity();
                     }else{
-                        ((TextView)findViewById(R.id.error)).setText("Contraseña incorrecta");
+                        ((TextView)findViewById(R.id.error)).setText("Password incorrect");
                         ((TextView)findViewById(R.id.error)).setVisibility(View.VISIBLE);
                     }
                 }

@@ -14,7 +14,7 @@
         android:banner="@drawable/banner"
         android:theme="@style/Theme.Leanback">
         <activity
-            android:name=".ActividadPrincipal"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape" >
             <intent-filter>
@@ -22,17 +22,17 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ActividadDetalles">
+        <activity android:name=".activity.DetailsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
             <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".PlaybackOverlayActivity" />
-        <activity android:name=".SearchActivity" android:exported="true" />
-        <activity android:name=".ActividadProtected"/>
+        <activity android:name=".activity.PlaybackOverlayActivity" />
+        <activity android:name=".activity.SearchActivity" android:exported="true" />
+        <activity android:name=".activity.ProtectedActivity"/>
         <receiver
-            android:name=".BootupActivity"
+            android:name=".activity.BootupActivity"
             android:enabled="true"
             android:exported="false" >
             <intent-filter>

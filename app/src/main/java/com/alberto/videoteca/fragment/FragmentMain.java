@@ -1,9 +1,7 @@
-package com.alberto.videoteca;
+package com.alberto.videoteca.fragment;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.icu.text.DisplayContext;
 import android.os.Bundle;
 import android.support.v17.leanback.app.BrowseFragment;
 import android.support.v17.leanback.widget.ArrayObjectAdapter;
@@ -22,6 +20,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alberto.videoteca.models.Movie;
+import com.alberto.videoteca.models.MovieList;
+import com.alberto.videoteca.R;
+import com.alberto.videoteca.activity.SearchActivity;
+import com.alberto.videoteca.Utils;
+import com.alberto.videoteca.activity.DetailsActivity;
+import com.alberto.videoteca.activity.ProtectedActivity;
+import com.alberto.videoteca.presenter.CardPresenter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -33,7 +39,7 @@ import java.util.List;
  * Created by Alberto on 02/07/2017.
  */
 
-public class FragmentPrincipal extends BrowseFragment{
+public class FragmentMain extends BrowseFragment{
 
     private static final int GRID_ITEM_WIDTH = 200;
     private static final int GRID_ITEM_HEIGHT = 200;
@@ -125,13 +131,13 @@ public class FragmentPrincipal extends BrowseFragment{
                 Movie movie = (Movie) item;
                 if(movie.getCategory().equalsIgnoreCase("Protected")){
                     movieProtected = movie;
-                    bundleProtected = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), ((ImageCardView) itemViewHolder.view).getMainImageView(), ActividadDetalles.SHARED_ELEMENT_NAME).toBundle();
-                    Intent intent = new Intent(getActivity(), ActividadProtected.class);
+                    bundleProtected = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), ((ImageCardView) itemViewHolder.view).getMainImageView(), DetailsActivity.SHARED_ELEMENT_NAME).toBundle();
+                    Intent intent = new Intent(getActivity(), ProtectedActivity.class);
                     startActivityForResult(intent, 1);
                 }else{
-                    Intent intent = new Intent(getActivity(), ActividadDetalles.class);
-                    intent.putExtra(ActividadDetalles.MOVIE, movie);
-                    Bundle bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), ((ImageCardView) itemViewHolder.view).getMainImageView(), ActividadDetalles.SHARED_ELEMENT_NAME).toBundle();
+                    Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                    intent.putExtra(DetailsActivity.MOVIE, movie);
+                    Bundle bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), ((ImageCardView) itemViewHolder.view).getMainImageView(), DetailsActivity.SHARED_ELEMENT_NAME).toBundle();
                     getActivity().startActivity(intent, bundle);
                 }
             } else if (item instanceof String) {
@@ -165,8 +171,8 @@ public class FragmentPrincipal extends BrowseFragment{
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == 1) {
-            Intent intent = new Intent(getActivity(), ActividadDetalles.class);
-            intent.putExtra(ActividadDetalles.MOVIE, movieProtected);
+            Intent intent = new Intent(getActivity(), DetailsActivity.class);
+            intent.putExtra(DetailsActivity.MOVIE, movieProtected);
             getActivity().startActivity(intent, bundleProtected);
         }
     }

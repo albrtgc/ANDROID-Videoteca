@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.provider.BaseColumns;
 
+import com.alberto.videoteca.models.Movie;
+import com.alberto.videoteca.models.MovieList;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
