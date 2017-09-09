@@ -1,4 +1,4 @@
-package com.alberto.videoteca.activity;
+package com.goncanapp.videoteca.activity;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -11,9 +11,9 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.VideoView;
 
-import com.alberto.videoteca.fragment.PlaybackOverlayFragment;
-import com.alberto.videoteca.R;
-import com.alberto.videoteca.models.Movie;
+import com.goncanapp.videoteca.fragment.PlaybackOverlayFragment;
+import com.goncanapp.videoteca.R;
+import com.goncanapp.videoteca.models.Movie;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;

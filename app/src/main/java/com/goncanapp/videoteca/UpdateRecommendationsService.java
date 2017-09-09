@@ -1,4 +1,4 @@
-package com.alberto.videoteca;
+package com.goncanapp.videoteca;
 
 import android.app.IntentService;
 import android.app.Notification;
@@ -8,9 +8,9 @@ import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 
-import com.alberto.videoteca.activity.DetailsActivity;
-import com.alberto.videoteca.models.Movie;
-import com.alberto.videoteca.models.MovieList;
+import com.goncanapp.videoteca.activity.DetailsActivity;
+import com.goncanapp.videoteca.models.Movie;
+import com.goncanapp.videoteca.models.MovieList;
 
 import java.io.IOException;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.alberto.videoteca.fragment;
+package com.goncanapp.videoteca.fragment;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -20,14 +20,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.alberto.videoteca.models.Movie;
-import com.alberto.videoteca.models.MovieList;
-import com.alberto.videoteca.R;
-import com.alberto.videoteca.activity.SearchActivity;
-import com.alberto.videoteca.Utils;
-import com.alberto.videoteca.activity.DetailsActivity;
-import com.alberto.videoteca.activity.ProtectedActivity;
-import com.alberto.videoteca.presenter.CardPresenter;
+import com.goncanapp.videoteca.models.Movie;
+import com.goncanapp.videoteca.models.MovieList;
+import com.goncanapp.videoteca.R;
+import com.goncanapp.videoteca.activity.SearchActivity;
+import com.goncanapp.videoteca.Utils;
+import com.goncanapp.videoteca.activity.DetailsActivity;
+import com.goncanapp.videoteca.activity.ProtectedActivity;
+import com.goncanapp.videoteca.presenter.CardPresenter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

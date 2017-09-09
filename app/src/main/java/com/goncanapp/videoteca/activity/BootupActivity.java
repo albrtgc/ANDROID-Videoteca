@@ -1,4 +1,4 @@
-package com.alberto.videoteca.activity;
+package com.goncanapp.videoteca.activity;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -6,7 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.alberto.videoteca.UpdateRecommendationsService;
+import com.goncanapp.videoteca.UpdateRecommendationsService;
 
 /**
  * Created by Alberto on 02/07/2017.

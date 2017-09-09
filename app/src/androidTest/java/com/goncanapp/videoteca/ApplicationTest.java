@@ -1,4 +1,4 @@
-package com.alberto.videoteca;
+package com.goncanapp.videoteca;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

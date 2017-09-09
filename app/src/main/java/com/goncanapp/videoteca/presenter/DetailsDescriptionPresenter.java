@@ -1,8 +1,8 @@
-package com.alberto.videoteca.presenter;
+package com.goncanapp.videoteca.presenter;
 
 import android.support.v17.leanback.widget.AbstractDetailsDescriptionPresenter;
 
-import com.alberto.videoteca.models.Movie;
+import com.goncanapp.videoteca.models.Movie;
 
 /**
  * Created by Alberto on 02/07/2017.

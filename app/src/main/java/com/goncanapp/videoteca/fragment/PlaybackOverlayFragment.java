@@ -1,4 +1,4 @@
-package com.alberto.videoteca.fragment;
+package com.goncanapp.videoteca.fragment;
 
 import android.content.Context;
 import android.media.MediaMetadataRetriever;
@@ -24,11 +24,11 @@ import android.support.v17.leanback.widget.RowPresenter;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.alberto.videoteca.R;
-import com.alberto.videoteca.activity.DetailsActivity;
-import com.alberto.videoteca.models.Movie;
-import com.alberto.videoteca.models.MovieList;
-import com.alberto.videoteca.presenter.CardPresenter;
+import com.goncanapp.videoteca.R;
+import com.goncanapp.videoteca.activity.DetailsActivity;
+import com.goncanapp.videoteca.models.Movie;
+import com.goncanapp.videoteca.models.MovieList;
+import com.goncanapp.videoteca.presenter.CardPresenter;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;

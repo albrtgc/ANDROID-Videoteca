@@ -1,4 +1,4 @@
-package com.alberto.videoteca.activity;
+package com.goncanapp.videoteca.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.alberto.videoteca.R;
+import com.goncanapp.videoteca.R;
 
 /**
  * Created by Alberto on 02/07/2017.

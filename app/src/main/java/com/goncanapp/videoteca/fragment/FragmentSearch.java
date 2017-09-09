@@ -1,4 +1,4 @@
-package com.alberto.videoteca.fragment;
+package com.goncanapp.videoteca.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,10 +16,10 @@ import android.support.v17.leanback.widget.RowPresenter;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.text.TextUtils;
 
-import com.alberto.videoteca.presenter.CardPresenter;
-import com.alberto.videoteca.models.Movie;
-import com.alberto.videoteca.models.MovieList;
-import com.alberto.videoteca.activity.DetailsActivity;
+import com.goncanapp.videoteca.presenter.CardPresenter;
+import com.goncanapp.videoteca.models.Movie;
+import com.goncanapp.videoteca.models.MovieList;
+import com.goncanapp.videoteca.activity.DetailsActivity;
 
 import java.util.Locale;
 

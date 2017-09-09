@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.alberto.videoteca">
+    package="com.goncanapp.videoteca">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
@@ -14,7 +14,7 @@
         android:banner="@drawable/banner"
         android:theme="@style/Theme.Leanback">
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.goncanapp.videoteca.activity.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape" >
             <intent-filter>
@@ -22,25 +22,25 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DetailsActivity">
+        <activity android:name="com.goncanapp.videoteca.activity.DetailsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
             <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".activity.PlaybackOverlayActivity" />
-        <activity android:name=".activity.SearchActivity" android:exported="true" />
-        <activity android:name=".activity.ProtectedActivity"/>
+        <activity android:name="com.goncanapp.videoteca.activity.PlaybackOverlayActivity" />
+        <activity android:name="com.goncanapp.videoteca.activity.SearchActivity" android:exported="true" />
+        <activity android:name="com.goncanapp.videoteca.activity.ProtectedActivity"/>
         <receiver
-            android:name=".activity.BootupActivity"
+            android:name="com.goncanapp.videoteca.activity.BootupActivity"
             android:enabled="true"
             android:exported="false" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <service android:name=".UpdateRecommendationsService" android:enabled="true" />
-        <provider android:name=".VideoContentProvider" android:authorities="com.alberto.videoteca" android:exported="true" />
+        <service android:name="com.goncanapp.videoteca.UpdateRecommendationsService" android:enabled="true" />
+        <provider android:name="com.goncanapp.videoteca.VideoContentProvider" android:authorities="com.goncanapp.videoteca" android:exported="true" />
     </application>
 
 </manifest>

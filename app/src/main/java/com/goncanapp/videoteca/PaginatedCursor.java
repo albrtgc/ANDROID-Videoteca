@@ -1,4 +1,4 @@
-package com.alberto.videoteca;
+package com.goncanapp.videoteca;
 
 import android.database.AbstractCursor;
 import android.database.Cursor;

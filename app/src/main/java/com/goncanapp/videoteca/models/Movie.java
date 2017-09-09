@@ -1,4 +1,4 @@
-package com.alberto.videoteca.models;
+package com.goncanapp.videoteca.models;
 
 import android.util.Log;
 

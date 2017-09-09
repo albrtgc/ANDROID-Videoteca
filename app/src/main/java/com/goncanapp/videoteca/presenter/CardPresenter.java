@@ -1,4 +1,4 @@
-package com.alberto.videoteca.presenter;
+package com.goncanapp.videoteca.presenter;
 
 import android.graphics.drawable.Drawable;
 import android.support.v17.leanback.widget.ImageCardView;
@@ -6,8 +6,8 @@ import android.support.v17.leanback.widget.Presenter;
 import android.util.Log;
 import android.view.ViewGroup;
 
-import com.alberto.videoteca.models.Movie;
-import com.alberto.videoteca.R;
+import com.goncanapp.videoteca.models.Movie;
+import com.goncanapp.videoteca.R;
 import com.bumptech.glide.Glide;
 
 /**

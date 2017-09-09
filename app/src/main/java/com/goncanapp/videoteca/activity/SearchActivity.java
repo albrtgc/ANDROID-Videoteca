@@ -1,12 +1,12 @@
-package com.alberto.videoteca.activity;
+package com.goncanapp.videoteca.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v17.leanback.widget.SpeechRecognitionCallback;
 
-import com.alberto.videoteca.R;
-import com.alberto.videoteca.fragment.FragmentSearch;
+import com.goncanapp.videoteca.R;
+import com.goncanapp.videoteca.fragment.FragmentSearch;
 
 /**
  * Created by Alberto on 02/07/2017.
