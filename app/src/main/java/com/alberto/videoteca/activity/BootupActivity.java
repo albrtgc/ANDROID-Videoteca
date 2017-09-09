@@ -1,19 +1,12 @@
 package com.alberto.videoteca.activity;
 
 import android.app.AlarmManager;
-import android.app.IntentService;
-import android.app.Notification;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.TaskStackBuilder;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
 import com.alberto.videoteca.UpdateRecommendationsService;
-
-import java.io.IOException;
-import java.util.List;
 
 /**
  * Created by Alberto on 02/07/2017.

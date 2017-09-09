@@ -35,7 +35,6 @@ import java.lang.annotation.Target;
 public class FragmentDetails extends DetailsFragment {
 
     private Movie mSelectedMovie;
-    private Target mBackgroundTarget;
     private DisplayMetrics mMetrics;
     private static final String MOVIE = "Movie";
     private BackgroundManager mBackgroundManager;
@@ -70,7 +69,7 @@ public class FragmentDetails extends DetailsFragment {
         mDorPresenter =new DetailsOverviewRowPresenter(new DetailsDescriptionPresenter());
         mMetrics = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(mMetrics);
-        cargarDetalles(mSelectedMovie);
+        uploadDetails(mSelectedMovie);
         mDorPresenter.setSharedElementEnterTransition(getActivity(), DetailsActivity.SHARED_ELEMENT_NAME);
         mDorPresenter.setOnActionClickedListener(new OnActionClickedListener() {
             @Override
@@ -105,7 +104,7 @@ public class FragmentDetails extends DetailsFragment {
                 });
     }
 
-    private void cargarDetalles(Movie mSelectedMovie){
+    private void uploadDetails(Movie mSelectedMovie){
         final DetailsOverviewRow row = new DetailsOverviewRow(mSelectedMovie);
         int width = Utils.convertDpToPixel(getActivity()
                 .getApplicationContext(), DETAIL_THUMB_WIDTH);

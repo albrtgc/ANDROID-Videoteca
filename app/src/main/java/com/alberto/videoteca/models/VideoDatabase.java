@@ -1,4 +1,4 @@
-package com.alberto.videoteca;
+package com.alberto.videoteca.models;
 
 import android.app.SearchManager;
 import android.content.ContentValues;
@@ -9,6 +9,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.provider.BaseColumns;
 
+import com.alberto.videoteca.PaginatedCursor;
+import com.alberto.videoteca.R;
+import com.alberto.videoteca.Utils;
 import com.alberto.videoteca.models.Movie;
 import com.alberto.videoteca.models.MovieList;
 import com.google.gson.Gson;

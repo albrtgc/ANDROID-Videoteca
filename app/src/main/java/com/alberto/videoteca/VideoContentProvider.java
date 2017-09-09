@@ -8,6 +8,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
+import com.alberto.videoteca.models.VideoDatabase;
+
 /**
  * Created by Alberto on 02/07/2017.
  */

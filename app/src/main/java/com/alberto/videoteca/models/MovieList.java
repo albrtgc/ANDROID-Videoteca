@@ -1,7 +1,5 @@
 package com.alberto.videoteca.models;
 
-import com.alberto.videoteca.models.Movie;
-
 import java.util.List;
 
 /**
